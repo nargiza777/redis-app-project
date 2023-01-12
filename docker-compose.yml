@@ -1,0 +1,21 @@
+version: '3.4'
+services:
+  application:
+    image: test-application:latest
+    environment:
+      - REDIS_HOST=redis
+      - REDIS_PORT=${REDIS_PORT}
+    ports:
+      - ${APP_PORT}:${APP_PORT}
+    depends_on:
+      - redis
+    expose:
+      - ${APP_PORT}
+    links:
+      - redis
+  redis:
+    image: redis:latest
+    hostname: redis
+    restart: always
+    ports:
+      - ${REDIS_PORT}:${REDIS_PORT}
