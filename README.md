@@ -2,6 +2,7 @@
 ### Locally:
 1. Install [Docker](https://docs.docker.com/get-docker/) and [Docker Compose](https://docs.docker.com/compose/install/)
 2. Run local-script.sh
+3. From your browser, open localhost:9001. You should be able to connect to webserver. 
 
 ### On Kubernetes:
 1. Install [Kubernetes](https://kubernetes.io/docs/tasks/tools/install-kubectl/) and [Helm](https://helm.sh/docs/intro/install/)
