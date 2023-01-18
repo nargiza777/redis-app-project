@@ -7,7 +7,7 @@ COPY package*.json ./
 RUN npm install
 
 COPY . .
-ARG APP_PORT=9100
+ARG APP_PORT=9001
 RUN sed -i -e "s/port_number/$APP_PORT/" index.html
 ENV APP_PORT=$APP_PORT
 
